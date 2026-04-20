@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9984bb6-8a7d-4ef8-80dc-0014e57f9812" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/apps/news-app/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/news-app/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/news-app/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/news-app/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/news-app/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/news-app/app/page.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/apps/news-app" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="3CXyG2ISC9Sm7B4Ykndrtmq9JaF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "test-preview",
+    "last_opened_file_path": "/Users/dsoghomonyan/Desktop/nextjs-foundations/apps/news-app",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "ssh.settings",
+    "ts.external.directory.path": "/Users/dsoghomonyan/Desktop/nextjs-foundations/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/news-app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/web/src/app/api" />
+      <recent name="$PROJECT_DIR$/apps/web/src/app" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.28774.2" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9984bb6-8a7d-4ef8-80dc-0014e57f9812" name="Changes" comment="" />
+      <created>1751973265208</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751973265208</updated>
+      <workItem from="1751973266620" duration="68000" />
+      <workItem from="1751973373649" duration="438000" />
+      <workItem from="1776546110578" duration="4593000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
