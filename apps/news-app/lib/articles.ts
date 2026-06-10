@@ -1,3 +1,5 @@
+import { cacheLife, cacheTag } from "next/cache";
+
 export type Article = {
   slug: string;
   title: string;
@@ -127,15 +129,23 @@ Technology is playing a supporting role. Real-time mobility data from transit ap
   },
 ];
 
-export function getAllArticles(): Article[] {
+export async function getAllArticles(): Promise<Article[]> {
+  "use cache";
+  cacheLife("articles");
+  cacheTag("articles");
   return articles;
 }
 
-export function getArticleBySlug(slug: string): Article | undefined {
+export async function getArticleBySlug(slug: string): Promise<Article | undefined> {
+  "use cache";
+  cacheLife("articles");
+  cacheTag("articles", `article-${slug}`);
   return articles.find((a) => a.slug === slug);
 }
 
-export function searchArticles(query: string): Article[] {
+export async function searchArticles(query: string): Promise<Article[]> {
+  "use cache";
+  cacheLife("articles");
   const q = query.toLowerCase().trim();
   if (!q) return articles;
   return articles.filter(

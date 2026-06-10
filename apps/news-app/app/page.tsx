@@ -2,8 +2,8 @@ import ArticleCard from "@/components/ArticleCard";
 import { getAllArticles } from "@/lib/articles";
 import Link from "next/link";
 
-export default function HomePage() {
-  const articles = getAllArticles();
+export default async function HomePage() {
+  const articles = await getAllArticles();
   const featured = articles[0];
   const rest = articles.slice(1);
 

@@ -8,7 +8,7 @@ type Props = {
 export default async function SearchPage({ searchParams }: Props) {
   const { q } = await searchParams;
   const query = q ?? "";
-  const results = searchArticles(query);
+  const results = await searchArticles(query);
 
   return (
     <div>
