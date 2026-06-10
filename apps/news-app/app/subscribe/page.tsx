@@ -1,21 +1,34 @@
 import { getSubscriptionStatus } from "@/lib/subscription";
 import { redirect } from "next/navigation";
 import SubscribeButton from "@/components/SubscribeButton";
+import { Suspense } from "react";
 
 type Props = {
   searchParams: Promise<{ from?: string }>;
 };
 
-export default async function SubscribePage({ searchParams }: Props) {
+// Dynamic: reads cookies() + searchParams — must live inside <Suspense>
+async function RedirectIfSubscribed({
+  searchParams,
+}: {
+  searchParams: Promise<{ from?: string }>;
+}) {
   const isSubscribed = await getSubscriptionStatus();
   const { from } = await searchParams;
-
   if (isSubscribed) {
     redirect(from ?? "/");
   }
+  return null;
+}
 
+export default function SubscribePage({ searchParams }: Props) {
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
+      {/* Streams in: redirects if already subscribed */}
+      <Suspense fallback={null}>
+        <RedirectIfSubscribed searchParams={searchParams} />
+      </Suspense>
+
       <div className="max-w-md w-full text-center px-6">
         <div className="text-5xl mb-4">🔒</div>
         <h1 className="text-3xl font-black text-gray-900 mb-3">
@@ -27,12 +40,12 @@ export default async function SubscribePage({ searchParams }: Props) {
         </p>
 
         <div className="flex justify-center mb-6">
-          <SubscribeButton isSubscribed={false} redirectTo={from} />
+          <SubscribeButton isSubscribed={false} />
         </div>
 
         <p className="text-xs text-gray-400">
           Already subscribed?{" "}
-          <a href={from ?? "/"} className="text-blue-500 hover:underline">
+          <a href="/" className="text-blue-500 hover:underline">
             Go back
           </a>
         </p>

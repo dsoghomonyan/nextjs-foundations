@@ -4,9 +4,13 @@ import { getSubscriptionStatus } from "@/lib/subscription";
 import SubscribeButton from "./SubscribeButton";
 import SearchInput from "./SearchInput";
 
-export default async function Header() {
+// Dynamic: reads cookies() — must live inside <Suspense>
+async function SubscribeStatus() {
   const isSubscribed = await getSubscriptionStatus();
+  return <SubscribeButton isSubscribed={isSubscribed} />;
+}
 
+export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
@@ -23,7 +27,9 @@ export default async function Header() {
           <Suspense fallback={null}>
             <SearchInput />
           </Suspense>
-          <SubscribeButton isSubscribed={isSubscribed} />
+          <Suspense fallback={null}>
+            <SubscribeStatus />
+          </Suspense>
         </div>
       </div>
     </header>
